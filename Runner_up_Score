@@ -1,0 +1,17 @@
+#Runner Up Score
+
+def yes(A,y,maximum):
+    if(A[y] == maximum):
+        y=y-1
+        yes(A,y,maximum)
+    elif(A[y]<maximum):
+        print(A[y])    
+    else:
+        print(maximum)
+n = int(input())
+y = n-1
+A = [int(x) for x in input().split()]
+maximum = max(A)
+A.sort()
+yes(A,y,maximum)
+
