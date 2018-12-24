@@ -1,0 +1,12 @@
+def printing(i,n,x):
+   
+    if(i<=n):
+        x=(x*10)+i
+        i=i+1
+        printing(i,n,x)
+    else:
+        print(x)
+n=input()
+i=1
+x=0
+printing(i,n,x)
