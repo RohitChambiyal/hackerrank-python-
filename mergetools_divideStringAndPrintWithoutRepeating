@@ -1,0 +1,32 @@
+def merge_the_tools(string, k):
+    l = len(string)
+    a=0
+    n=k
+    h=0
+    splt = int(l/k)
+    hello(string,a,k,splt,l,n,h)
+
+def yes():
+    a='rohit'
+    
+def hello(string,a,k,splt,l,n,h):
+    if(h<=n):
+        h=h+1
+        x = string[a:k]
+        a = k
+        k = k+k
+        check(x)
+        hello(string,a,k,splt,l,n,h)
+    
+   
+
+def check(x):
+    print(''.join([j for i,j in enumerate(x) if j not in x[:i]]))
+    
+'''    12/3
+
+   0:3 3:3+3 3+3: 3+3+3 3+3+3:3+3+3+3 if k>l'''
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
