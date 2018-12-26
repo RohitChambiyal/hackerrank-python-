@@ -1,0 +1,4 @@
+import re
+for _ in range(int(input())):
+    x=input().strip()
+    print('Valid' if re.search(r'[A-Z].*[A-Z]',x) and re.search(r'[0-9].*[0-9].*[0-9]',x) and re.search(r'^[0-9a-zA-Z]{10}$',x) and not re.search(r'(.).*\1',x) else 'Invalid')
