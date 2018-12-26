@@ -1,0 +1,60 @@
+def comparison(marks,n,i):
+    #function working
+    if(marks[i][1]==marks[i+1][1]):
+        #print("run")
+        i=i+1
+        comparison(marks,n,i)
+    else:
+        #print(marks[i+1][1])
+        u = marks[i+1][1]
+        #print(u)
+        
+        #print(u)
+        for i in range(n):
+            if(marks[i][1]==u):
+                newmarks.append([marks[i][0],marks[i][1]])
+        newmarks.sort()
+        a = len(newmarks)
+    #print(a)
+        for i in range(a):
+            print(newmarks[i][0])
+        
+        
+        
+        
+        
+        
+
+from operator import itemgetter
+n = int(input())
+marks =[]
+newmarks = []
+x=0
+i=0
+for _ in range(n):
+    marks.append([input(), float(input())])
+#print(marks) clean
+marks = sorted(marks,key = itemgetter(1))
+#good print(marks)
+q = len(marks)
+#print(q)
+i=0
+#print(marks)
+if(marks[0][1]==marks[q-1][1]):
+    for i in range(q):
+        print(marks[i][0])
+        
+else:
+    comparison(marks,n,i)
+    '''print(u)
+    for i in range(n):
+        if(marks[i][1]==u):
+            newmarks.append([marks[i][0],marks[i][1]])
+    newmarks.sort()
+    a = len(newmarks)
+    #print(a)
+    for i in range(a):
+        print(newmarks[i][0])'''
+
+
+
