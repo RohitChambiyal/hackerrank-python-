@@ -1,0 +1,12 @@
+
+S = input()  
+x= any(map(str.isalnum, S))
+y=any(map(str.isalpha, S))
+z=any(map(str.isdigit, S))
+a=any(map(str.islower, S))
+b=any(map(str.isupper, S))
+print(x)
+print(y)
+print(z)
+print(a)
+print(b)
